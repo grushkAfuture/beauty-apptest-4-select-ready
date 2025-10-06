@@ -1,0 +1,213 @@
+/* === Базовые настройки === */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* === Шапка === */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 100%;
+  max-width: 450px;
+  margin-top: 20px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #2b3c6f;
+  object-fit: cover;
+}
+
+.header-text {
+  text-align: left;
+}
+
+.header-text h1 {
+  font-size: 18px;
+  margin: 0;
+  color: #2b3c6f;
+  white-space: nowrap;
+}
+
+.header-text p {
+  margin: 2px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* === Слоган === */
+.slogan {
+  background-color: #2b3c6f;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px 0;
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* === Контейнер кнопок === */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 450px;
+  align-items: stretch;
+  padding: 0 10px;
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-decoration: none;
+  color: #2b3c6f;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.menu-button img {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  vertical-align: middle;
+  /* перекрашиваем иконки в синий цвет GRUSHKA */
+  filter: brightness(0) saturate(100%) invert(15%) sepia(28%) saturate(1166%) hue-rotate(186deg) brightness(90%) contrast(92%);
+}
+
+/* === Примечания === */
+.footer-note {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: white;
+  padding: 10px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 25px;
+  line-height: 1.4;
+}
+
+/* === Футер === */
+footer {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  margin: 20px 0 40px;
+}
+
+/* === Внутренние страницы === */
+h1 {
+  text-align: center;
+  color: #2b3c6f;
+  margin-top: 25px;
+  font-size: 22px;
+}
+
+.container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer a.button {
+  display: inline-block;
+  background-color: #2b3c6f;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-weight: 500;
+}
+
+footer a.button:hover {
+  background-color: #1e2e5a;
+}
+
+/* === Мобильная адаптация === */
+@media (max-width: 500px) {
+  header {
+    width: 95%;
+    padding: 8px 12px;
+  }
+
+  .logo {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  .header-text h1 {
+    font-size: 16px;
+  }
+
+  .header-text p {
+    font-size: 12px;
+  }
+
+  .slogan {
+    width: 95%;
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .menu-button {
+    font-size: 15px;
+    padding: 13px;
+  }
+
+  .menu-button img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer-note {
+    width: 95%;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
